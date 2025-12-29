@@ -1,14 +1,14 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
-  Linkedin, Briefcase, Layers,
+  Github, Linkedin, Briefcase, Layers,
   BookOpen, Layout, Cpu, Globe, MapPin,
   Terminal, Star, Users, FolderGit, Bot,
   ChevronDown, ChevronUp, ExternalLink, Hash, Monitor
-} from 'lucide-react'
+} from 'lucide-react';
 
 const CONTENT = {
   en: {
@@ -87,50 +87,50 @@ const CONTENT = {
       awards: "Penghargaan & Prestasi"
     }
   }
-}
+};
 
 const EXPERIENCE_DATA = [
   {
     company: "PT Sobat Kreasi Nusantara",
     role: "Backend Engineer",
     period: "Aug 2025 - Present",
-    description: "Developed enterprise-level backend systems using Java. Integrated Midtrans Payment Gateway and optimized API performance for healthcare applications. Collaborated with cross-functional teams to ensure high availability and security for sensitive medical data."
+    description: "Developed enterprise-level backend systems using Java for multiple projects (Biomedilab, Sompo Insurance). Integrated Midtrans Payment Gateway, optimizing transaction success rates and enhancing API performance for healthcare applications."
   },
   {
     company: "PT Paragon Technology",
     role: "Backend Engineer",
     period: "Aug 2025 - Present",
-    description: "Contributed to Warehouse Management System (WMS) integrated with ERP. Implemented Batch Management across 24+ warehouses and SAP integration modules. Improved inventory tracking accuracy by 35% through automated synchronization systems."
+    description: "Contributed to building a massive Warehouse Management System (WMS) integrated with ERP. Successfully migrated Batch Management across 24+ active warehouses and built SAP integration modules for real-time synchronization."
   },
   {
     company: "Mufko App",
     role: "Backend Engineer & DevOps",
     period: "Feb 2025 - Present",
-    description: "Maintained robust backend systems using Laravel for 4,100 daily active users. Optimized database queries and set up AWS services including EC2, RDS, and S3. Implemented CI/CD pipelines to streamline deployment processes."
+    description: "Maintained robust backend systems using Laravel for 4,100 daily active users. Optimized database queries to enhance reliability and set up AWS Services (EC2, RDS) for scalable infrastructure."
   },
   {
     company: "ZEP Co., Ltd",
     role: "Marketing & Growth Team",
     period: "Dec 2024 - Feb 2025",
-    description: "Developed automation scripts for social media analytics and lead generation, reducing manual reporting time by 80%. Analyzed user data to optimize marketing campaigns and increase conversion rates."
+    description: "Developed Python automation scripts for social media analytics (TikTok/Instagram) and cold email outreach, reducing manual reporting & data collection time by approximately 80%."
   },
   {
     company: "Pens MyToefl App",
-    role: "Backend Engineer & Flutter Developer",
+    role: "Backend Engineer & DevOps & Flutter Dev",
     period: "Apr 2024 - Jun 2024",
-    description: "Designed Quiz Service API using Laravel and configured Docker microservices with DigitalOcean CI/CD. Developed responsive mobile interfaces using Flutter, including gamified test modules."
+    description: "Designed Quiz Service API using Laravel. Configured Docker microservices with DigitalOcean CI/CD. Developed responsive mobile interfaces using Flutter, implementing a Duolingo-style leveling game."
   },
   {
     company: "Agile Product Development Team A1",
     role: "Product Owner & Flutter Developer",
     period: "Mar 2024 - Jun 2024",
-    description: "Led a team of 5 to develop and deploy the Budgetin App (4.8+ rating). Implemented Agile methodologies throughout the lifecycle and developed key Flutter modules."
+    description: "Managed a team of 5 to develop the Budgetin App (4.8+ Play Store rating). Successfully implemented Agile methodologies and developed core Flutter modules."
   },
   {
     company: "PT. Digital Solusi Master",
     role: "Web Developer",
     period: "Dec 2023 - Feb 2024",
-    description: "Maintained Diakademik educational app, improving system stability by 25%. Converted Figma designs into responsive Tailwind CSS interfaces with 95% user satisfaction."
+    description: "Maintained Diakademik educational app used by 2,000+ users, improving stability by 25%. Converted Figma designs into responsive Tailwind CSS interfaces with 95% user satisfaction."
   },
   {
     company: "Cipta Kode",
@@ -138,7 +138,7 @@ const EXPERIENCE_DATA = [
     period: "Dec 2022 - Present",
     description: "Successfully completed 10+ freelance projects using React, Laravel, Python, and AI technologies, delivering tailored web solutions for diverse clients."
   }
-]
+];
 
 const SHOWCASE_DATA = [
   {
@@ -169,19 +169,19 @@ const SHOWCASE_DATA = [
     color: "from-orange-500 to-red-500",
     icon: <Terminal size={48} />
   }
-]
+];
 
 const SOCIAL_LINKS = {
   github: "https://github.com/Reza1290",
   linkedin: "https://www.linkedin.com/in/m-rezamuktasib/?_l=en_US",
   email: "mailto:reza.muktasib@gmail.com",
   blog: "https://pemrograman-tech.blogspot.com"
-}
+};
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
-}
+};
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -192,7 +192,7 @@ const containerVariants = {
       delayChildren: 0.2
     }
   }
-}
+};
 
 const BlackHole = () => {
   return (
@@ -206,8 +206,8 @@ const BlackHole = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const Navbar = ({ lang, setLang, t }: { lang: 'en' | 'id', setLang: any, t: any }) => {
   return (
@@ -234,8 +234,8 @@ const Navbar = ({ lang, setLang, t }: { lang: 'en' | 'id', setLang: any, t: any 
         </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
 const Specialization = ({ t }: { t: any }) => {
   return (
@@ -243,13 +243,13 @@ const Specialization = ({ t }: { t: any }) => {
       <div className="absolute top-10 right-0 opacity-5 pointer-events-none select-none hidden lg:block">
         <pre className="text-sm font-mono text-[#58a6ff]">
           {`interface Engineer {
-  name: "Reza"
-  skills: ["React", "STM32", "Go"]
-  teams: ["Me As Robotics", "Paragon"]
+  name: "Reza";
+  skills: ["React", "STM32", "Go"];
+  teams: ["Me As Robotics", "Paragon"];
 }
 
 function buildFuture() {
-  return new Innovation()
+  return new Innovation();
 }`}
         </pre>
       </div>
@@ -312,8 +312,8 @@ function buildFuture() {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 const ShowcaseSection = ({ t }: { t: any }) => {
   return (
@@ -352,15 +352,15 @@ const ShowcaseSection = ({ t }: { t: any }) => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 const ExperienceCard = ({ job }: { job: any }) => {
-  const [isExpanded, setIsExpanded] = useState(false)
-  const isLongText = job.description.length > 100
+  const [isExpanded, setIsExpanded] = useState(false);
+  const isLongText = job.description.length > 100;
 
   return (
-    <motion.div variants={fadeIn} className="relative pl-6 pb-10 border-l border-[#30363d] last:pb-0 last:border-0">
+    <div className="relative pl-6 pb-10 border-l border-[#30363d] last:pb-0 last:border-0 fade-in">
       <div className="absolute left-[-5px] top-1.5 w-2.5 h-2.5 rounded-full bg-[#30363d] border-2 border-[#0d1117] transition-colors hover:bg-[#58a6ff]"></div>
       <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-1">
         <h3 className="text-base font-bold text-white font-display">{job.role}</h3>
@@ -387,32 +387,37 @@ const ExperienceCard = ({ job }: { job: any }) => {
           </button>
         )}
       </div>
-    </motion.div>
-  )
-}
+    </div>
+  );
+};
 
 const BlogSection = ({ t }: { t: any }) => {
-  const [posts, setPosts] = useState<any[]>([])
-  const [loading, setLoading] = useState(true)
+  const [posts, setPosts] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('api/blogger')
+    const RSS_URL = "https://pemrograman-tech.blogspot.com/feeds/posts/default?alt=rss";
+    const API_URL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(RSS_URL)}`;
+
+    fetch(API_URL)
       .then(res => res.json())
       .then(data => {
-        const formattedPosts = data.feed.entry.map((entry: any) => ({
-          title: entry.title.$t,
-          link: entry.link.find((l: any) => l.rel === 'alternate').href,
-          published: new Date(entry.published.$t).toLocaleDateString(),
-          summary: entry.summary ? entry.summary.$t.substring(0, 120) + "..." : "Click to read more."
-        }))
-        setPosts(formattedPosts)
-        setLoading(false)
+        if (data.items) {
+          const formattedPosts = data.items.slice(0, 3).map((item: any) => ({
+            title: item.title,
+            link: item.link,
+            published: item.pubDate.split(' ')[0], // Simple date formatting
+            summary: item.description ? item.description.replace(/<[^>]+>/g, '').substring(0, 120) + "..." : "Click to read more."
+          }));
+          setPosts(formattedPosts);
+        }
+        setLoading(false);
       })
       .catch(err => {
-        console.error("Failed to fetch blog posts", err)
-        setLoading(false)
-      })
-  }, [])
+        console.error("Failed to fetch blog posts via rss2json", err);
+        setLoading(false);
+      });
+  }, []);
 
   return (
     <section id="blog" className="py-20 bg-[#0d1117] border-t border-[#30363d]">
@@ -460,8 +465,8 @@ const BlogSection = ({ t }: { t: any }) => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 const LinkedInCard = () => {
   return (
@@ -494,8 +499,8 @@ const LinkedInCard = () => {
           </div>
        </div>
     </div>
-  )
-}
+  );
+};
 
 const Hero = ({ t, githubStats }: { t: any, githubStats: any }) => {
   return (
@@ -542,16 +547,16 @@ const Hero = ({ t, githubStats }: { t: any, githubStats: any }) => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 const ContentSection = ({ t, repos }: { t: any, repos: any[] }) => {
-  const MAX_VISIBLE = 4 
-  const [showAll, setShowAll] = useState(false)
+  const MAX_VISIBLE = 4;
+  const [showAll, setShowAll] = useState(false);
 
   const visibleExperiences = showAll
     ? EXPERIENCE_DATA
-    : EXPERIENCE_DATA.slice(0, MAX_VISIBLE)
+    : EXPERIENCE_DATA.slice(0, MAX_VISIBLE);
 
   return (
     <section className="bg-[#0d1117]">
@@ -601,7 +606,7 @@ const ContentSection = ({ t, repos }: { t: any, repos: any[] }) => {
             </div>
           </motion.div>
 
-          {/* Experience */}
+          {/* Experience - Removed complex AnimatePresence to fix bug */}
           <motion.div
             id="experience"
             variants={containerVariants}
@@ -614,23 +619,10 @@ const ContentSection = ({ t, repos }: { t: any, repos: any[] }) => {
               {t.sections.experience}
             </h2>
 
-            <div className="bg-[#0d1117] overflow-hidden">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={showAll ? "all" : "short"}
-                  initial="hidden"
-                  animate="visible"
-                  exit="hidden"
-                  variants={{
-                    visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
-                    hidden: { opacity: 0 }
-                  }}
-                >
-                  {visibleExperiences.map((job: any, i: number) => (
-                    <ExperienceCard key={i} job={job} />
-                  ))}
-                </motion.div>
-              </AnimatePresence>
+            <div className="bg-[#0d1117] overflow-hidden transition-all duration-500 ease-in-out">
+              {visibleExperiences.map((job: any, i: number) => (
+                <ExperienceCard key={i} job={job} />
+              ))}
             </div>
 
             {EXPERIENCE_DATA.length > MAX_VISIBLE && (
@@ -684,7 +676,7 @@ const Footer = ({ t }: { t: any }) => {
       <div className="py-16 border-b border-[#30363d] bg-gradient-to-b from-[#0d1117] to-[#161b22]">
          <div className="container mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold text-white mb-4 font-display">{t.profile.status}</h2>
-            <p className="text-[#8b949e] mb-8 max-w-xl mx-auto">I&aposm currently available for freelance projects and open to full-time opportunities.</p>
+            <p className="text-[#8b949e] mb-8 max-w-xl mx-auto">I&apos;m currently available for freelance projects and open to full-time opportunities.</p>
             <a href={SOCIAL_LINKS.email} className="inline-block px-8 py-3 bg-[#238636] text-white font-bold rounded-md hover:bg-[#2ea043] transition-colors shadow-lg font-display">{t.profile.cta}</a>
          </div>
       </div>
@@ -697,30 +689,30 @@ const Footer = ({ t }: { t: any }) => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
 export default function App() {
-  const [lang, setLang] = useState<'en' | 'id'>('en')
-  const [githubStats, setGithubStats] = useState<any>(null)
-  const [repos, setRepos] = useState<any[]>([])
-  const t = CONTENT[lang]
+  const [lang, setLang] = useState<'en' | 'id'>('en');
+  const [githubStats, setGithubStats] = useState<any>(null);
+  const [repos, setRepos] = useState<any[]>([]);
+  const t = CONTENT[lang];
 
   useEffect(() => {
-    fetch('https://api.github.com/users/Reza1290').then(res => res.json()).then(data => setGithubStats(data))
-    fetch('https://api.github.com/users/Reza1290/repos?sort=updated&per_page=4').then(res => res.json()).then(data => setRepos(data))
-  }, [])
+    fetch('https://api.github.com/users/Reza1290').then(res => res.json()).then(data => setGithubStats(data));
+    fetch('https://api.github.com/users/Reza1290/repos?sort=updated&per_page=4').then(res => res.json()).then(data => setRepos(data));
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#0d1117] text-[#c9d1d9] font-sans selection:bg-[#1f6feb] selection:text-white">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400500&family=Public+Sans:wght@300400500600700&display=swap')
-        :root { --font-sans: 'Public Sans', sans-serif --font-mono: 'JetBrains Mono', monospace }
-        body { font-family: var(--font-sans) background-color: #0d1117 }
-        .font-display { font-family: var(--font-sans) letter-spacing: -0.02em }
-        .font-mono { font-family: var(--font-mono) }
-        @keyframes float { 0%, 100% { transform: translateY(0) } 50% { transform: translateY(-20px) } }
-        .animate-float { animation: float 6s ease-in-out infinite }
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Public+Sans:wght@300;400;500;600;700&display=swap');
+        :root { --font-sans: 'Public Sans', sans-serif; --font-mono: 'JetBrains Mono', monospace; }
+        body { font-family: var(--font-sans); background-color: #0d1117; }
+        .font-display { font-family: var(--font-sans); letter-spacing: -0.02em; }
+        .font-mono { font-family: var(--font-mono); }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+        .animate-float { animation: float 6s ease-in-out infinite; }
       `}</style>
       
       <Navbar lang={lang} setLang={setLang} t={t} />
@@ -730,5 +722,5 @@ export default function App() {
       </main>
       <Footer t={t} />
     </div>
-  )
+  );
 }
