@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server'
 
+export const dynamic = 'force-static'
+
 export async function GET() {
   const res = await fetch(
     'https://pemrograman-tech.blogspot.com/feeds/posts/default?alt=json&max-results=3',
